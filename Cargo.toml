@@ -1,0 +1,8 @@
+[package]
+name = "count"
+version = "1.0.0"
+authors = ["Jaemin Hong <hjm0901@gmail.com>"]
+edition = "2021"
+
+[dependencies]
+clap = { version = "3.2.16", features = ["derive"] }
