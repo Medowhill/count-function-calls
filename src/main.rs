@@ -9,20 +9,13 @@ struct Args {
 
 fn main() {
     let args: Args = Args::parse();
-    let mut functions = count::count::collect(&args.input)
-        .drain(..)
-        .filter(|s| {
-            s.starts_with("pthread_cond")
-                || s.starts_with("pthread_mutex")
-                || s.starts_with("pthread_rwlock")
-                || s.starts_with("pthread_spin")
-        })
-        .collect::<Vec<_>>();
-    let len = functions.len();
-    functions.sort();
-    functions.dedup();
-    for f in functions {
-        println!("{}", f);
-    }
-    println!("{}", len);
+    let functions = count::count::collect(&args.input);
+    let count = |x: &str| functions.iter().filter(|s| s.starts_with(x)).count();
+    println!(
+        "{}\t{}\t{}\t{}",
+        count("pthread_cond"),
+        count("pthread_mutex"),
+        count("pthread_rwlock"),
+        count("pthread_spin")
+    );
 }
