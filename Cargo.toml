@@ -1,5 +1,5 @@
 [package]
-name = "count"
+name = "api_counter"
 version = "1.0.0"
 authors = ["Jaemin Hong <hjm0901@gmail.com>"]
 edition = "2021"

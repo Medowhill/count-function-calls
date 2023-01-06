@@ -3,6 +3,13 @@
 version = 3
 
 [[package]]
+name = "api_counter"
+version = "1.0.0"
+dependencies = [
+ "clap",
+]
+
+[[package]]
 name = "atty"
 version = "0.2.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -62,13 +69,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2850f2f5a82cbf437dd5af4d49848fbdfc27c157c3d010345776f952765261c5"
 dependencies = [
  "os_str_bytes",
-]
-
-[[package]]
-name = "count"
-version = "1.0.0"
-dependencies = [
- "clap",
 ]
 
 [[package]]

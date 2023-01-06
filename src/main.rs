@@ -9,7 +9,7 @@ struct Args {
 
 fn main() {
     let args: Args = Args::parse();
-    let functions = count::count::collect(&args.input);
+    let functions = api_counter::count::collect(&args.input);
     let count = |x: &str| functions.iter().filter(|s| s.starts_with(x)).count();
     println!(
         "{}\t{}\t{}\t{}",
