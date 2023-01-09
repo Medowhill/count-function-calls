@@ -13,9 +13,9 @@ fn main() {
     let count = |x: &str| functions.iter().filter(|s| s.starts_with(x)).count();
     println!(
         "{}\t{}\t{}\t{}",
-        count("pthread_cond"),
         count("pthread_mutex"),
         count("pthread_rwlock"),
-        count("pthread_spin")
+        count("pthread_spin"),
+        count("pthread_cond")
     );
 }
